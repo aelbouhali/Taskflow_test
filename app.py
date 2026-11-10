@@ -30,8 +30,8 @@ def measure(response):
 
 @app.get("/health")
 def health():
-    #return jsonify(status="ok", version=os.getenv("APP_VERSION", "v1"))
-    return "Erreur", 500  # Modifié pour faire échouer le test
+    return jsonify(status="ok", version=os.getenv("APP_VERSION", "v1"))
+
 
 @app.get("/metrics")
 def metrics():
